@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: powderblue;
+        }
+
+        #box {
+            width: 100%;
+            min-height: 700px;
+            top: 0;
+            left: 0;
+            background: palegoldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" v-lee="btn">
+        哎呀妈呀
+        {{list}}
+    </div>
+    <script src="vue.js"></script>
+    <script src="vue-resource.js"></script>
+    <script>
+        Vue.directive('lee', {
+            inserted(dom, data) {
+                dom.style.position = 'relative'
+                dom.onmousedown = function (event) {
+                    var z_y = event.clientY
+                    var type = true
+                    document.onmousemove = function (event) {
+                        var h_y = event.clientY
+                        if (h_y > z_y && document.documentElement.scrollTop == 0) {
+                            var y = h_y - z_y
+                            dom.style.top = y + 'px'
+                            if (y > 150) {
+                                type = false
+                            }
+                        }
+                    }
+                    window.onmouseup = function () {
+                        document.onmousemove = ''
+                        dom.style.transition = 'all 1s'
+                        if (type) {
+                            dom.style.top = 0 + 'px'
+                            dom.style.transition = ''
+                        } else {
+                            dom.style.top = 100 + 'px'
+                            data.value()
+                        }
+                    }
+                }
+            },
+            componentUpdated(dom) {
+                setTimeout(() => {
+                    dom.style.top = 0 + 'px'
+                    dom.style.transition = ''
+                }, 1000)
+            }
+        })
+        new Vue({
+            el: "#box",
+            data: {
+                list: ''
+            },
+            methods: {
+                btn() {
+                    this.$http.post('http://read.xiaoshuo1-sm.com/novel/i.php?do=is_pay_sdlist&page=1&size=10&shuqi_h5=&onlyCpBooks=1&_=1575964596892', {
+                        do: 'is_pay_sdlist',
+                        page: 1,
+                        size: 10,
+                        shuqi_h5: '',
+                        onlyCpBooks: 1,
+                        _: '1575964596892'
+                    }, {
+                        emulateJSON: true
+                    }).then((data) => {
+                        this.list = data.data
+                        console.log(data)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
