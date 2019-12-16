@@ -1,80 +1,267 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="" name="description">
+	<meta content="" name="author">
+	<title>博客</title>
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway:300,700,900,500' rel='stylesheet' type='text/css'>
 
-	<script src="https://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
+	<link href="assets/css/animate.css" rel="stylesheet">
+	<link href="assets/css/plugins.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 
-		[v-cloak] {
-			display: none;
-		}
-
-		ul>a>li {
-			float: left;
-			width: 140px;
-			line-height: 60px;
-			color: white;
-		}
-	</style>
 </head>
 
-<body>
-	<div style="width: 100%; height: 100%;float: left;">
-		<div class="banner" style="margin-bottom: 160px;">
-			<ul style="width: 100%;; height: 60px; float: left;background: palevioletred;padding-left: 320px;">
-				<a href="index1.html">
-					<li>首页</li>
-				</a>
-				<a href="#">
-					<li>品牌故事</li>
-				</a>
-				<a href="index3.html">
-					<li>品牌活动</li>
-				</a>
-				<img style="float:left;margin-right: 60px;"
-					src="https://ccdn.goodq.top/caches/5b743e0bb0d5034c5a35797b53e8ee02/aHR0cHM6Ly81Yjc3NzY4ZDE3MmE3LnQ3My5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMTgvMDgvYjkyMTRhZTA0MTAzZGRmMDM1ZDQ0Yzg3ZDJhY2U3NTAucG5n.png"
-					alt="">
-				<a href="index4.html">
-					<li>产品中心</li>
-				</a>
-				<a href="index5.html">
-					<li>加入我们</li>
-				</a>
-				<a href="#">
-					<li>天猫商城</li>
-				</a>
-			</ul>
+<body class="top-navigation">
+	<div id="master-wrapper">
+
+		<div class="preloader">
+			<div class="preloader-img">
+				<span class="loading-animation animate-flicker"><img src="2.gif" alt="loading" /></span>
+			</div>
 		</div>
-		<div class="text" style="width: 100%;height: 600px;text-align: center;">
-			<h3 style="margin-bottom: 60px;">品牌故事<br>
-				<span style="font-size: 18px;">STORY</span> </h3>
-				<p style="width: 50%;margin-left: 500px;text-align: left;line-height: 30px;">冰淇淋是一种极具诱惑力的美味冷冻奶制品。将近800年以前，冰淇淋源于中国。
-						13世纪，举世闻名的意大利探险家马可·波罗回到意大利，带回了中国的冰淇淋制法。1500年，法国一位国王与意大利皇室的一位成员结婚时，冰淇淋又由意大利传入了法国。法国人在原有做法的基础上，又增加了许多新的配料。1625年，新继位的英国国王查理一世，为能吃到这种消暑食品，曾专门聘请了一位厨师来制作冰淇淋，并要求这位厨师对冰淇淋的配方严加保密。
-						大约在1700年，冰淇淋传入美洲大陆。美国首任总统乔治·华盛顿对这种新工艺痴爱异常。当时，冰淇淋的制作还很不容易。人们要在夏天吃到这种食品，不得不在冬天到河里取冰块，把它们贮放在锯末里。冰激凌仍然是富贵人家的食品。1846年，美国的一位冬叫南希·约翰逊的女士对复杂的工艺进行了改进，制造了一种手动曲柄式冷冻机，使冰淇淋的制作工艺更加简单容易。1851年，美国人扎卡布·费斯赛尔在美国马里兰州的巴尔的摩开办了美国首家冰淇淋制作工厂。
-						1900年，由于电力和制冷学的广泛应用，冰淇淋的制作过程加快，降低了成本，从而使价格大大下降。从那以后，冰淇淋就开始成为一种普及的降暑食品。
-						</p>
-						<p style="width: 50%;margin-left: 500px;text-align: left;line-height: 30px;">由于冰箱和冰柜在中国的日益普及，每逢炎热的夏季来临，无论城市还是乡村的大小商店，都有冰淇淋出售；许多家庭还习惯自制适合自己口味的冰淇淋；即使在寒冷的冬天，也有不少人喜欢吃冰淇淋。1900年，由于电力和制冷学的广泛应用，冰淇淋的制作过程加快，降低了成本，从而使价格大大下降。从那以后，冰淇淋就开始成为一种普及的降暑食品。由于冰箱和冰柜在中国的日益普及，每逢炎热的夏季来临，无论城市还是乡村的大小商店，都有冰淇淋出售；许多家庭还习惯自制适合自己口味的冰淇淋；即使在寒冷的冬天，也有不少人喜欢吃冰淇淋。1900年，由于电力和制冷学的广泛应用，冰淇淋的制作过程加快，降低了成本，从而使价格大大下降。从那以后，冰淇淋就开始成为一种普及的降暑食品。
-						由于冰箱和冰柜在中国的日益普及，每逢炎热的夏季来临，无论城市还是乡村的大小商店，都有冰淇淋出售；许多家庭还习惯自制适合自己口味的冰淇淋；即使在寒冷的冬天，也有不少人喜欢吃冰淇淋。</p>
+
+		<div class="nav-wrapper smoothie">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-3">
+						<a class="logo" href="#"><img alt="" class="logo img-responsive"
+								src="assets/images/logo-light.png"></a>
+					</div>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+						data-target="#navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="col-xs-9">
+						<div class="collapse navbar-collapse" id="navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#about-us" class="page-scroll">自我介绍</a></li>
+								<li><a href="#latest-releases" class="page-scroll">项目</a></li>
+								<li><a href="#contact-us" class="page-scroll">联系资料</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
+		<header id="home" class="fullheight">
+			<div id="BigVideo" class="player"
+				data-property="{videoURL:'', containment:'#home', autoPlay:true, mute:true, opacity:1, showControls : false, startAt: 30}">
+			</div>
+		</header>
+
+		<section id="about-us" style="background: #ccc;color: white;">
+			<div class="section-inner">
+				<div class="container">
+					<div class="row mb60 text-center">
+						<div class="col-sm-12">
+							<h3 class="section-title">自我介绍</h3>
+						</div>
+					</div>
+					<div class="meg">
+						<div class="head">
+							<div class="lead">
+								<div class="img" style="width: 200px;height: 200px;margin-left: 480px;">
+									<img src="2.jpg" alt="" style="width: 200px;height: 200px;border-radius: 50%;">
+								</div>
+							</div>
+						</div>
+						<div class="megess" style="margin-left: 500px;margin-top: 40px;">
+							<p>姓名：赵兴佳</p>
+							<p>年龄：18</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="latest-releases">
+			<div class="section-inner">
+				<div class="container">
+					<div class="row mb60 text-center">
+						<div class="col-sm-12">
+							<h3 class="section-title">项目</h3>
+						</div>
+					</div>
+					<div class="row mb90">
+						<div class="col-md-8 col-md-offset-2">
+
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="music-carousel" class="carousel slide">
+											<div class="carousel-inner">
+												<div class="item active">
+													<div class="row">
+														<div class="col-md-3"><a href="12.11/index.html"
+																class="thumbnail smoothie">12.11</a>
+															<a href="12.11/下拉.html" class="thumbnail smoothie">12.11</a>
+															<a href="12.11/下拉1.html"
+																class="thumbnail smoothie">12.11</a>
+															<a href="12.11/下拉2.html"
+																class="thumbnail smoothie">12.11</a>
+															<a href="12.11/下拉3.html"
+																class="thumbnail smoothie">12.11</a>
+															<a href="12.11/下拉4.html"
+																class="thumbnail smoothie">12.11</a>
+														</div>
+														<div class="col-md-3"><a href="12.12/xuanxiangka.html"
+																class="thumbnail smoothie">12.12</a>
+															<a href="12.12/sfq.html"
+																class="thumbnail smoothie">12.12</a>
+															<a href="12.12/lunbo.html"
+																class="thumbnail smoothie">12.12</a>
+														</div>
+														<div class="col-md-3">
+															<a href="12.13/index1.html" class="thumbnail smoothie">12.13
+															</a>
+															<a href="12.13/yemian.html"
+																class="thumbnail smoothie">12.13</a>
+														</div>
+														<div class="col-md-3">
+															<a href="12.13/index1.html" class="thumbnail smoothie">12.14
+															</a>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a data-slide="prev" href="#music-carousel" class="left carousel-control">‹</a>
+										<a data-slide="next" href="#music-carousel" class="right carousel-control">›</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 	</div>
-	<script src="vue.js"></script>
+	</section>
+
+
+	<section id="contact-us" class="dark-wrapper">
+		<div class="section-inner">
+			<div class="container">
+				<div class="row mb60 text-center">
+					<div class="col-sm-12">
+						<h3 class="section-title">资料</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12" role="tabpanel">
+						<div class="row">
+							<div class="col-sm-6 col-sm-offset-3">
+								<!-- Nav tabs -->
+								<ul class="nav nav-justified" id="nav-tabs" role="tablist">
+									<li role="presentation" class="">
+										<a href="#contact-2" aria-controls="contact-2" role="tab" data-toggle="tab"
+											class="btn btn-white btn-lg">
+											<span>联系方式</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<div class="tab-content pt60" id="tabs-collapse">
+									<div role="tabpanel" class="tab-pane fade" id="contact-2">
+										<div class="tab-inner">
+											<div class="row">
+												<div class="col-md-8 col-md-offset-2">
+													<div class="row">
+														<div id="message" class="col-sm-12">&nbsp;</div>
+														<div class="col-sm-12">
+															<form method="post" action="sendemail.php" id="contactform"
+																class="main-contact-form">
+																<div class="form-group">
+																	<input type="text"
+																		class="form-control col-md-4 mb20" name="tel"
+																		placeholder="电话号码 *" id="name" required
+																		data-validation-required-message="Please enter your name." />
+																	<input type="text"
+																		class="form-control col-md-4 mb20" name="email"
+																		placeholder="邮箱*" id="email" required
+																		data-validation-required-message="Please enter your email address." />
+																	<input type="text"
+																		class="form-control col-md-4 mb20" name="微信"
+																		placeholder="微信 *" id="website" required
+																		data-validation-required-message="Please enter your web address." />
+																</div>
+																<textarea name="comments" class="form-control mb20"
+																	id="comments" placeholder="反馈 *" required
+																	data-validation-required-message="Please enter a message."></textarea>
+																<input class="btn btn-white mt30 pull-right"
+																	type="submit" name="submit" value="提交" />
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="assets/js/plugins.js"></script>
+
+	<script src="assets/js/init.js"></script>
+	<script type="text/javascript">
+		jQuery(window).load(function () {
+			"use strict";
+
+			jQuery('.player-controls a').on('click', function (event) {
+				event.preventDefault();
+			});
+			jQuery('a.vol').on('click', function (event) {
+				var $this = jQuery(this).children('i');
+				if ($this.hasClass('fa-volume-off')) {
+					$this.removeClass('fa-volume-off').addClass('fa-volume-up');
+				}
+				else {
+					$this.removeClass('fa-volume-up').addClass('fa-volume-off');
+				}
+			});
+		});
+	</script>
+
 </body>
 
 </html>
