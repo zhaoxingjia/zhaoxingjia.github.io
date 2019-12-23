@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        ul>li {
+            float: left;
+            width: 106px;
+
+            text-align: center;
+        }
+
+        ul>li>a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 800px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 800px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" v-vloak="">
+        <div style="width: 100%; height: 75px;">
+            <div
+                style="width: 100%;background:rgba(15, 12, 12, 0.9);opacity: 0.8; line-height: 75px; height: 75px;float: left;position: fixed;">
+                <a style="height: 75px;float: left;cursor: pointer;">
+                    <img style="height: 32px;float: left;margin-top: 20px;margin-left: 33px;"
+                        src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/827268401d6c21e295a363793abb1bfa.png"
+                        alt=""></a>
+                <ul style="height: 75px;float: left;margin-left: 80px;">
+                    <li><a href="#/list">首页</a></li>
+                    <li><a href="#/list1">公司简介</a></li>
+                    <li><a href="#/list2">产品和服务</a></li>
+                    <li><a href="#/list3">企业团队</a></li>
+                    <li><a href="#/list4">企业动态</a></li>
+                    <li><a href="#/list5">联系我们</a></li>
+                </ul>
+                <i style="font-size: 21px;margin-left: 664px;color: rgb(223, 165, 8);" class="el-icon-phone"></i><span
+                style="font-size: 18px;color: #fafafa;margin-left: 8px;">400-558-1234</span>
+            </div>
+        </div>
+        
+
+        <div style="min-height:1800px;margin: 0 auto;">
+            {{$router.path}}
+            <router-view></router-view>
+        </div>
+        <div
+            style="width: 100%;height: 65px;background: #d2b071;float: left;color: white;text-align: center;line-height: 65px;font-size: 14px;">
+            版权所有 ©2017-2087 苏州卡达网络科技有限公司</div>
+
+    </div>
+    <template id="list">
+
+        <div style="margin: 0;padding: 0;">
+           
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img style="width: 100%;height: 794px;"
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/742d7ea4fe96e1d9e975b7935ac99080.jpg"
+                            alt=""></div>
+                    <div class="swiper-slide"><img style="width: 100%;height: 794px;"
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/515b21f23bbda822878257785662ca6f.jpg"
+                            alt=""></div>
+                    <div class="swiper-slide"><img style="width: 100%;height: 794px;"
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/ed1e49440374d97677725c40f4dbfbfe.jpg"
+                            alt=""></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div style="width: 100%;height: 208px;float: left;text-align: center;margin-top: 60px;">
+                <p style="font-size: 42px;margin-bottom: 30px;">恒远财富 诚信为道</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;">坚守金融理财行业职业道德，秉承着“用心创造财富，追求幸福生活”的理念，</p>
+                <p style="font-size: 18px;color: #5e5e5e;">以专业的技能、热情的服务、优质的产品，为广大投资者提供更加安全贴心、丰富便捷、尊享专属的理财服务。</p>
+                <div
+                    style="width: 1290px;height: 1px;background: #bdbbbb;float: left;margin-bottom: 1px ;margin-top: 20px;margin-left: 300px;">
+                </div>
+                <div
+                    style="width: 1290px;margin-left: 300px; height: 2px;float: left;text-align: center;background: #000000;">
+                </div>
+                <div
+                    style="width: 1290px;height: 1px;margin-top: 7px; margin-left: 300px; background: #bdbbbb;float: left;">
+                </div>
+            </div>
+            <no1 style="float: left;width: 330px;margin-top: 30px; margin-left: 230px;" v-for="i in arr" :ddd="i"></no1>
+            <a-lee
+                style="width: 100%;height: 408px;float: left;background: rgba(15, 12, 12, 0.9);text-align: center;margin-top: 70px;">
+                <h3 style="font-size:40px;margin-top: 150px;color: white;" slot="titles">最值得信赖的财富管理专家</h3>
+                <p style="color: white;font-size:22px;margin-top: 20px;" slot="text">
+                    ONE OF THE MOST TRUSTED WEALTH MANAGEMENT EXPERTS
+                </p>
+            </a-lee>
+            <div style="width: 100%;height: 208px;float: left;text-align: center;margin-top: 60px;">
+                <p style="font-size: 42px;margin-bottom: 30px;">我们的服务</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;">恒远财富以专注的工作态度，专业的胜任精神，专心的服务方式，为合作伙伴提供卓越的价值贡献，
+                </p>
+                <p style="font-size: 18px;color: #5e5e5e;">为能够帮助投资者的资产增值保驾护航而倍感自豪。</p>
+                <div
+                    style="width: 1290px;height: 1px;background: #bdbbbb;float: left;margin-bottom: 1px ;margin-top: 20px;margin-left: 300px;">
+                </div>
+                <div
+                    style="width: 1290px;margin-left: 300px; height: 2px;float: left;text-align: center;background: #000000;">
+                </div>
+                <div
+                    style="width: 1290px;height: 1px;margin-top: 7px; margin-left: 300px; background: #bdbbbb;float: left;">
+                </div>
+            </div>
+            <div style="width: 100%;height: 200px;float: left;margin-top: 20px;">
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 450px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-s-fold"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>项目融资顾问</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-attract
+                        " style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 健康消费</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-rank"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>供应链金融</span></div>
+                </div>
+            </div>
+            <div style="width: 100%;height: 200px;float: left;margin-top: 10px;">
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 450px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-truck"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>医疗健康</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-full-screen"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 企业投资顾问</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-s-data"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 企业上市顾问</span></div>
+                </div>
+            </div>
+            <a-lee
+                style="width: 100%;height: 408px;float: left;background: rgba(15, 12, 12, 0.9);text-align: center;margin-top: 70px;">
+                <h3 style="font-size:40px;margin-top: 150px;color: white;" slot="titles">真诚、专业的财富投资顾问</h3>
+                <p style="color: white;font-size:22px;margin-top: 20px;" slot="text">
+                    Sincere, the wealth of the professional investment advisers
+                </p>
+            </a-lee>
+            <div style="width: 100%;height: 208px;float: left;text-align: center;margin-top: 60px;">
+                <p style="font-size: 42px;margin-bottom: 30px;">企业团队</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;">
+                    我们是一群有着专业知识，有理想，有激情的理财师，我们热爱理财事业，有着共同的追求，因此走到了一起。</p>
+                <div
+                    style="width: 1290px;height: 1px;background: #bdbbbb;float: left;margin-bottom: 1px ;margin-top: 20px;margin-left: 300px;">
+                </div>
+                <div
+                    style="width: 1290px;margin-left: 300px; height: 2px;float: left;text-align: center;background: #000000;">
+                </div>
+                <div
+                    style="width: 1290px;height: 1px;margin-top: 7px; margin-left: 300px; background: #bdbbbb;float: left;">
+                </div>
+            </div>
+            <div style="width: 100%;height: 445px;float: left;margin-top: 20px;">
+                <div
+                    style="width: 310px;height: 388px;border: 1px solid #ae955f;float: left;margin-left: 300px;margin-right: 5px;">
+                    <div style="width: 310px;height: 310px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/5ec7bf73e023f04e405d289b88ec81d4-590x590.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 20px;margin-left: 10px;">张经理</p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">公司总经理，国际金融理财师(CFP) <a href="#"><i
+                                    style="color: #ae955f;margin-left: 5px; font-size: 20px;"
+                                    class="el-icon-s-custom"></i></a></p>
+                    </div>
+                </div>
+                <div
+                    style="width: 310px;height: 388px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 310px;height: 310px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/eaa831ea1a98d640af549a5d8e5c6b8d-590x590.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 20px;margin-left: 10px;">崔总监</p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">公司总经理，国际金融理财师(CFP) <a href="#"><i
+                                    style="color: #ae955f;margin-left: 5px; font-size: 20px;"
+                                    class="el-icon-s-custom"></i></a></p>
+                    </div>
+                </div>
+                <div
+                    style="width: 310px;height: 388px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 310px;height: 310px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/11a4b42d2469617e779957de9959265b-590x590.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 20px;margin-left: 10px;">李经理</p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">公司总经理，国际金融理财师(CFP) <a href="#"><i
+                                    style="color: #ae955f;margin-left: 5px; font-size: 20px;"
+                                    class="el-icon-s-custom"></i></a></p>
+                    </div>
+                </div>
+                <div
+                    style="width: 310px;height: 388px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 310px;height: 310px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/a07271a6da7fdf95860d05cb4a865b95-590x590.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 20px;margin-left: 10px;">王律师</p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">公司总经理，国际金融理财师(CFP) <a href="#"><i
+                                    style="color: #ae955f;margin-left: 5px; font-size: 20px;"
+                                    class="el-icon-s-custom"></i></a></p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;height: 161px;float: left;">
+                <button
+                    style="margin-top: 20px; width: 260px;height: 48px;border: 1px solid #b6b5b5; background: #fcfcfc;margin-left: 830px;">
+                    <a href="#"><i style="color:#000000;margin-left: 5px; font-size: 20px;"
+                            class="el-icon-s-custom"></i></a><strong
+                        style="color: #000000;font-size: 18px;margin-left: 10px;">更多企业员工</strong></button>
+            </div>
+            <a-lee style="width: 100%;height: 408px;float: left;background: rgba(15, 12, 12, 0.9);text-align: center;">
+                <h3 style="font-size:40px;margin-top: 150px;color: white;" slot="titles">诚信、专业、合作、进取</h3>
+                <p style="color: white;font-size:22px;margin-top: 20px;" slot="text">
+                    Sincerity 、 Professional 、 Cooperation 、 Enterprising
+                </p>
+            </a-lee>
+            <div style="width: 100%;height: 208px;float: left;text-align: center;margin-top: 60px;">
+                <p style="font-size: 42px;margin-bottom: 30px;">企业动态</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;">
+                    恒远财富时刻关注行业动态，定期发布业内资讯。恒远财富始终坚持以客户为中心，以专业的技能、热情的服务、优质的产品，</p>
+                <p style="font-size: 18px;color: #5e5e5e;">为广大投资者提供更加安全贴心、丰富便捷、尊享专属的理财服务。</p>
+                <div
+                    style="width: 1290px;height: 1px;background: #bdbbbb;float: left;margin-bottom: 1px ;margin-top: 20px;margin-left: 300px;">
+                </div>
+                <div
+                    style="width: 1290px;margin-left: 300px; height: 2px;float: left;text-align: center;background: #000000;">
+                </div>
+                <div
+                    style="width: 1290px;height: 1px;margin-top: 7px; margin-left: 300px; background: #bdbbbb;float: left;">
+                </div>
+            </div>
+            <div style="width: 100%;height: 504px;float: left;margin-top: 20px;">
+                <div
+                    style="width: 380px;height: 504px;float: left;margin-left: 340px;margin-right: 40px;">
+                    <div style="width: 380px;height: 280px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-380x280.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 16px;margin-left: 10px;text-align: center;"><a style="text-decoration: none;"
+                                href="#">一起理财:投资从生活开始,理财从孩子抓起</a></p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">
+                            起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+                        </p>
+                        <a href="#" style="font-size: 16px;margin-left: 10px;color: #b28427;">阅读正文</a>
+                    </div>
+                </div>
+                <div
+                    style="width: 380px;height: 504px;float: left;margin-left: 5px;margin-right: 40px;">
+                    <div style="width: 380px;height: 280px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-380x280.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 16px;margin-left: 10px;text-align: center;"><a style="text-decoration: none;"
+                                href="#">一起理财:投资从生活开始,理财从孩子抓起</a></p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">
+                            起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+                        </p>
+                        <a href="#" style="font-size: 16px;margin-left: 10px;color: #b28427;">阅读正文</a>
+                    </div>
+                </div>
+                <div
+                    style="width: 380px;height: 504px;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 380px;height: 280px;"><img
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-380x280.jpg"
+                            style="width: 100%;height: 100%;"></img></div>
+                    <div style="line-height: 30px;font-size: 20px;background: white;">
+                        <p style="font-size: 16px;margin-left: 10px;text-align: center;"><a style="text-decoration: none;"
+                                href="#">一起理财:投资从生活开始,理财从孩子抓起</a></p>
+                        <p style="font-size: 14px;margin-left: 10px;color: #5e5e5e;">
+                            起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+                        </p>
+                        <a href="#" style="font-size: 16px;margin-left: 10px;color: #b28427;">阅读正文</a>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;height: 161px;float: left;margin-top: 100px;">
+                <button
+                    style="margin-top: 20px; width: 210px;height: 48px;border: 1px solid #b6b5b5; background: #fcfcfc;margin-left: 830px;">
+                    <a href="#"><i style="color:#000000;margin-left: 5px; font-size: 20px;"
+                            class="el-icon-s-custom"></i></a><strong
+                        style="color: #000000;font-size: 18px;margin-left: 10px;">更多新闻</strong></button>
+            </div>
+            <div style="width: 100%;height: 543px;float: left;background: rgba(15, 12, 12, 0.9);">
+                <div style="width: 416px;height: 543px;float: left;margin-left: 280px;color: white;">
+                    <p style="font-size: 36px;margin-top: 120px;margin-bottom: 25px;">联系我们</p>
+                    <p style="font-size: 16px;">地址：上海市松江区佘山林荫大道18号</p>
+                    <p style="font-size: 16px;">电话：400-558-5684</p>
+                    <p style="font-size: 16px;">传真：0512-66666667</p>
+                    <p style="font-size: 16px;">邮箱： hengyuan_123@163.com</p>
+                </div>
+                <div style="width: 416px;height: 543px;float: left;">
+                    <input style="width: 416px;height: 40px;margin-bottom: 10px;background: rgba(240, 240, 240, 0);color: #ababab;margin-top: 100px;" type="text" placeholder="您的名字*">
+                    <input style="width: 416px;height: 40px;background: rgba(240, 240, 240, 0);color: #ababab" type="text" placeholder="您的邮箱*">
+                    <p style="font-size: 12px;margin-bottom: 10px;color: #a3a3a3">我们将通过电子邮件的方式和您取得联系</p>
+                    <input style="width: 416px;height: 63px;background: rgba(240, 240, 240, 0);margin-bottom: 10px;color: #ababab" type="text" placeholder="您需要咨询的内容*">
+                    <input style="width: 416px;height: 40px;background: rgba(240, 240, 240, 0);color: #ababab" type="text" placeholder="请输入4位验证码*">
+                    <p style="background: white;width: 110px;height: 40px;line-height: 40px;text-align: center;margin-top: 5px;"><a href="#">wd26</a></p>
+                    <button style="margin-top: 20px;font-size: 16px; background: #b69b64;padding: 10px 20px;"><a href="#" style="color: white;">发送</a></button>
+                </div>
+                <div style="width: 416px;height: 416px;float: left;">
+                    <iframe src="index.html" style="width: 100%;height: 100%;margin-left: 50px;margin-top: 90px;" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="list1">
+        <div>
+            <div style="width: 100%;height: 400px;background: url(http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/65a030d55ea5774f96be868bea3e8fa2.jpg) no-repeat;">
+           
+                <p style="font-size: 42px;margin-bottom: 30px;position: absolute;top:150px;left: 730px;color: white;">您身边的金融理财顾问</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;position: absolute;top:210px;left: 780px;color: white;">FINANCIAL ADVISERS AROUND YOU</p>
+            </div>
+            <div style="width: 100%; height: 850px;float: left;margin-top: 40px;">
+                <p style="width: 1190px;height: 47px;float: left;font-size: 26px;line-height: 47px;margin-left: 350px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;"><i class="el-icon-s-cooperation"></i>公司简介</p>
+                <h3 style="width: 1190px;margin-left: 350px;margin-bottom: 40px;">起飞页 — 建站新视界！</h3>
+                <p style="width: 1190px;margin-left: 350px;margin-bottom: 20px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2016年底，在起飞页上创建的网站已超过20万+。</p>
+                <p style="width: 1190px;margin-left: 350px;margin-bottom: 20px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2016年底，在起飞页上创建的网站已超过20万+。</p style="width: 1190px;margin-left: 350px;">
+                <h3 style="width: 1190px;margin-left: 350px;margin-bottom: 40px;">起飞页 — 建站新视界起飞页推崇用户自己创建网站并享受建站所带来的乐趣！
+                </h3>
+                <p style="width: 1190px;margin-left: 350px;margin-bottom: 20px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2016年底，在起飞页上创建的网站已超过20万+。</p>
+                <p style="width: 1190px;margin-left: 350px;margin-bottom: 20px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2016年底，在起飞页上创建的网站已超过20万+。</p>
+            </div>
+        </div>
+    </template>
+    <template id="list2">
+        <div>
+            <div style="width: 100%;height: 400px;background: url(http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2017/01/65a030d55ea5774f96be868bea3e8fa2.jpg) no-repeat;">
+           
+                <p style="font-size: 42px;margin-bottom: 30px;position: absolute;top:150px;left: 730px;color: white;">您身边的金融理财顾问</p>
+                <p style="font-size: 18px;color: #5e5e5e;line-height: 40px;position: absolute;top:210px;left: 780px;color: white;">FINANCIAL ADVISERS AROUND YOU</p>
+            </div>
+            <div style="width: 100%; height: 140px;float: left;margin-top: 40px;">
+                <p style="width: 1190px;height: 47px;float: left;font-size: 26px;line-height: 47px;margin-left: 350px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;"><i class="el-icon-s-cooperation"></i>产品和服务</p>
+                
+                <p style="width: 1190px;margin-left: 350px;margin-bottom: 20px;">起飞页推崇用户起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。起飞页的工作团队是一群热爱互联网及软件事业的大伙伴和小伙伴，经验丰富、成熟稳定，基于对网站出版行业的热爱、对人人都能做出精美网站的向往，公司投入一千万元人民币，历时两年时间打造出起飞页平台。截至2016年底，在起飞页上创建的网站已超过20万+。</p>
+            </div>
+            <div style="width: 100%;height: 200px;float: left;margin-top: 20px;">
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 350px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-s-fold"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>项目融资顾问</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-attract
+                        " style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 健康消费</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-rank"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>供应链金融</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-truck"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span>医疗健康</span></div>
+                </div>
+            </div>
+            <div style="width: 100%;height: 200px;float: left;margin-top: 10px;margin-bottom: 80px;">
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 350px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-full-screen"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 企业投资顾问</span></div>
+                </div>
+                <div
+                    style="width: 314px;height: 200px;border: 1px solid #ae955f;float: left;margin-left: 5px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;background: #ae955f;"><i class="el-icon-s-data"
+                            style="font-size: 68px;color: white;margin-left: 125px;margin-top: 35px;"></i></div>
+                    <div style="line-height: 66px;text-align: center;font-size: 20px;color: #ae955f;background: white;">
+                        <span> 企业上市顾问</span></div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="list3">
+        <div>
+            <div
+            style="width: 100%;height: 400px;background: url(http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131.jpg) no-repeat;">
+
+            <p style="font-size: 42px;margin-bottom: 30px;position: absolute;top:150px;left: 730px;color: white;">
+                您身边的金融理财顾问</p>
+            <p
+                style="font-size: 18px;color: #5e5e5e;line-height: 40px;position: absolute;top:210px;left: 780px;color: white;">
+                FINANCIAL ADVISERS AROUND YOU</p>
+        </div>
+        <div style="width: 100%; height: 70px;float: left;margin-top: 40px;">
+            <p
+                style="width: 1190px;height: 47px;float: left;font-size: 26px;line-height: 47px;margin-left: 350px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;">
+                <i class="el-icon-s-cooperation"></i>企业团队</p>
+        </div>
+        <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+            <div
+                style="width: 230px;height: 230px; float: left;margin-left: 390px;margin-right: 5px;">
+                <div style="width: 314px;height: 134px;"><a href="#"><img style="border-radius: 50%;"
+                        src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/bbc02290117eaa4b828b547204d0ba93-230x230.jpg"
+                        alt=""></a><p style="margin-left: 90px;line-height: 30px;"><a style="color: #000000;" href="#">崔 东</a></p></div>
+
+            </div>
+            <div
+                style="width: 230px;height: 230px; float: left;margin-left: 50px;margin-right: 5px;">
+                <div style="width: 314px;height: 134px;"><a href="#"><img style="border-radius: 50%;"
+                    src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/e2c638fa19b542f47fb899a172065c5e-230x230.jpg"
+                    alt=""></a><p style="margin-left: 90px;line-height: 30px;"><a href="#" style="color: #000000;">李丽颖</a></p></div>
+
+            </div>
+            <div
+                style="width: 230px;height: 230px;float: left;margin-left: 50px;margin-right: 5px;">
+                <div style="width: 314px;height: 134px;"><a href="#"><img style="border-radius: 50%;"
+                    src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/ed265bc903a5a097f61d3ec064d96d2e-230x230.jpg"
+                    alt=""></a><p style="margin-left: 90px;line-height: 30px;"><a href="#" style="color: #000000;">张汉德</a></p></div>
+
+            </div>
+            <div
+                style="width: 230px;height: 230px;float: left;margin-left: 50px;margin-right: 5px;">
+                <div style="width: 314px;height: 134px;"><a href="#"><img style="border-radius: 50%;"
+                    src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/5802edc21c6a403bb14e96cd35731f99-230x230.jpg"
+                    alt=""></a><p style="margin-left: 90px;line-height: 30px;"><a href="#" style="color: #000000;">王雪娟</a></p></div>
+
+            </div>
+        </div>
+        </div>
+    </template>
+    <template id="list4">
+        <div>
+            <div
+            style="width: 100%;height: 400px;background: url(http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131.jpg) no-repeat;">
+
+            <p style="font-size: 42px;margin-bottom: 30px;position: absolute;top:150px;left: 730px;color: white;">
+                您身边的金融理财顾问</p>
+            <p
+                style="font-size: 18px;color: #5e5e5e;line-height: 40px;position: absolute;top:210px;left: 780px;color: white;">
+                FINANCIAL ADVISERS AROUND YOU</p>
+        </div>
+        <div style="width: 100%; height: 70px;float: left;margin-top: 40px;">
+            <p
+                style="width: 1190px;height: 47px;float: left;font-size: 26px;line-height: 47px;margin-left: 350px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;">
+                <i class="el-icon-s-cooperation"></i>企业动态</p>
+        </div>
+        <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+            <div
+                style="width: 1187px;height: 190px;float: left;margin-left: 390px;margin-right: 5px;">
+                <div style="width: 314px;height: 134px;"><a href="#"><img 
+                        src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-300x180.jpg"
+                        alt="" style="float: left;margin-right: 10px;"></a><p style="width: 852px;height: 20px; margin-left: 90px;line-height: 40px;font-size: 24px;"><a style="color: #000000;" href="#">一起理财:投资从生活开始,理财从孩子抓起</a></p>
+                        <p style="width: 852px;height: 30px; margin-left: 90px;line-height: 20px;font-size: 14px;color: #aaaaaa;margin-top: 20px;">发布日期：2017-10-17</p>
+                        <p style="width: 852px;height: 134px; margin-left: 300px;line-height: 22px;font-size: 14px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+
+
+                        </p>
+                    </div>
+
+            </div>
+            <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+                <div
+                    style="width: 1187px;height: 190px;float: left;margin-left: 390px;margin-right: 5px;">
+                    <div style="width: 314px;height: 134px;"><a href="#"><img 
+                            src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-300x180.jpg"
+                            alt="" style="float: left;margin-right: 10px;"></a><p style="width: 852px;height: 20px; margin-left: 90px;line-height: 40px;font-size: 24px;"><a style="color: #000000;" href="#">	教你“赚”投资海外资产的钱</a></p>
+                            <p style="width: 852px;height: 30px; margin-left: 90px;line-height: 20px;font-size: 14px;color: #aaaaaa;margin-top: 20px;">发布日期：2017-10-17</p>
+                            <p style="width: 852px;height: 134px; margin-left: 300px;line-height: 22px;font-size: 14px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+    
+    
+                            </p>
+                        </div>
+    
+                </div>
+                <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+                    <div
+                        style="width: 1187px;height: 190px;float: left;margin-left: 390px;margin-right: 5px;">
+                        <div style="width: 314px;height: 134px;"><a href="#"><img 
+                                src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-300x180.jpg"
+                                alt="" style="float: left;margin-right: 10px;"></a><p style="width: 852px;height: 20px; margin-left: 90px;line-height: 40px;font-size: 24px;"><a style="color: #000000;" href="#">	近两月来家庭不动产投资意愿止跌反弹再回落</a></p>
+                                <p style="width: 852px;height: 30px; margin-left: 90px;line-height: 20px;font-size: 14px;color: #aaaaaa;margin-top: 20px;">发布日期：2017-10-17</p>
+                                <p style="width: 852px;height: 134px; margin-left: 300px;line-height: 22px;font-size: 14px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+        
+        
+                                </p>
+                            </div>
+        
+                    </div>
+                    <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+                        <div
+                            style="width: 1187px;height: 190px;float: left;margin-left: 390px;margin-right: 5px;">
+                            <div style="width: 314px;height: 134px;"><a href="#"><img 
+                                    src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-300x180.jpg"
+                                    alt="" style="float: left;margin-right: 10px;"></a><p style="width: 852px;height: 20px; margin-left: 90px;line-height: 40px;font-size: 24px;"><a style="color: #000000;" href="#">	双十一临近 机构看好物流业投资机遇</a></p>
+                                    <p style="width: 852px;height: 30px; margin-left: 90px;line-height: 20px;font-size: 14px;color: #aaaaaa;margin-top: 20px;">发布日期：2017-10-17</p>
+                                    <p style="width: 852px;height: 134px; margin-left: 300px;line-height: 22px;font-size: 14px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+            
+            
+                                    </p>
+                                </div>
+            
+                        </div>
+                        <div style="width: 100%;height: 200px;float: left;margin-top: 20px;margin-bottom: 190px;">
+                            <div
+                                style="width: 1187px;height: 190px;float: left;margin-left: 390px;margin-right: 5px;">
+                                <div style="width: 314px;height: 134px;"><a href="#"><img 
+                                        src="http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131-300x180.jpg"
+                                        alt="" style="float: left;margin-right: 10px;"></a><p style="width: 852px;height: 20px; margin-left: 90px;line-height: 40px;font-size: 24px;"><a style="color: #000000;" href="#">海外房产投资暗藏风险 受汇率影响有投资者不赚反赔</a></p>
+                                        <p style="width: 852px;height: 30px; margin-left: 90px;line-height: 20px;font-size: 14px;color: #aaaaaa;margin-top: 20px;">发布日期：2015-03-30</p>
+                                        <p style="width: 852px;height: 134px; margin-left: 300px;line-height: 22px;font-size: 14px;">起飞页推崇用户自己创建网站并享受建站所带来的乐趣，因此我们为您准备了一套安全、稳定、不揪心的自助建站系统：在这里，您只需打字传图、用鼠标自由拖拽，便可在弹指间做出极具专业级别的网站。我们以全球首创的网页线性布局方案和傻瓜式图文编辑为核心，研发出这种颠覆传统的响应式网站制作方式，可以为您节约90%的建站时间。起飞页是苏州卡达网络科技有限公司旗下的一款杀手级产品。
+                
+                
+                                        </p>
+                                    </div>
+                
+                            </div>
+           
+        </div>
+        </div>
+    </template>
+    <template id="list5">
+        <div>
+            <div
+            style="width: 100%;height: 400px;background: url(http://5535ccf9ccdd8.t73.qifeiye.com/qfy-content/uploads/2015/03/142718629131.jpg) no-repeat;">
+
+            <p style="font-size: 42px;margin-bottom: 30px;position: absolute;top:150px;left: 730px;color: white;">
+                您身边的金融理财顾问</p>
+            <p
+                style="font-size: 18px;color: #5e5e5e;line-height: 40px;position: absolute;top:210px;left: 780px;color: white;">
+                FINANCIAL ADVISERS AROUND YOU</p>
+        </div>
+        <div style="width: 100%; height: 70px;float: left;margin-top: 40px;">
+            <p
+                style="width: 1190px;height: 47px;float: left;font-size: 26px;line-height: 47px;margin-left: 350px;margin-bottom: 20px;border-bottom: 1px solid #cccccc;">
+                <i class="el-icon-s-cooperation"></i>联系我们</p>
+        </div>
+        <div style="width: 100%;height: 643px;float: left;margin-top: 20px;margin-bottom: 190px;">
+            <div style="width: 420px;height:643px;float: left;margin-left: 390px;">
+                <p style="font-size: 16px;">地址：上海市松江区佘山林荫大道18号</p>
+                <p style="font-size: 16px;">电话：400-558-5684</p>
+                <p style="font-size: 16px;">传真：0512-66666667</p>
+                <p style="font-size: 16px;">邮箱： hengyuan_123@163.com</p>
+                <div style="width: 416px;height: 416px;float: left;">
+                    <iframe src="index.html" style="width: 100%;height: 100%;margin-top: 30px;" frameborder="0"></iframe>
+                </div>
+            </div>
+            <div>
+                <p style="width: 500px; margin-bottom: 20px;float: left;margin-left: 40px;">
+                    您可以通过以下表单给我们留言，我们将竭诚为您服务！</p>
+                <input type="text" placeholder="姓名" style="width: 570px;margin-bottom: 20px;height: 40px;margin-bottom: 20px;margin-left: 40px;">
+                <input type="text" placeholder="邮箱" style="width: 570px;margin-bottom: 20px;height: 40px;margin-left: 40px;">
+                <input type="text" placeholder="联系电话" style="width: 570px;margin-bottom: 20px;height: 40px;margin-left: 40px;">
+                <input type="text" placeholder="内容" style="width: 570px;margin-bottom: 20px;height: 63px;margin-left: 40px;">
+                <input type="text" placeholder="验证码" style="width: 570px;margin-bottom: 20px;height: 40px;margin-left: 40px;"></br>
+                <p style="width: 570px;height: 30px;line-height: 30px; float: left;margin-left: 40px; color: #cbab6c;">xd9k</p><br>
+                <button style="margin-left: -572px;float: left; font-size: 16px; background:white;border: 1px solid #cbab6c; padding: 10px 20px;margin-top: 40px;"><a href="#" style="color: #cbab6c;">发送</a></button>
+            </div>
+        </div>
+        </div>
+    </template>
+</body>
+<script src="vue.js"></script>
+<script src="vue-router.js"></script>
+<script src="node_modules/swiper/dist/js/swiper.min.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="index.js"></script>
+
+</html>
